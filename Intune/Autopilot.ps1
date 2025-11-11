@@ -19,10 +19,8 @@ $zipUrl = "https://github.com/andrew-s-taylor/public/releases/download/DeBloat/R
 $zipPath = "$templateFilePath\RemoveBloat.zip"
 $extractPath = "$templateFilePath"
 
-
 Invoke-WebRequest -Uri $zipUrl -OutFile $zipPath
 Expand-Archive -Path $zipPath -DestinationPath $extractPath -Force
-
 
 ##Populate between the speechmarks any apps you want to whitelist, comma-separated
 $arguments = ' -customwhitelist ""'
